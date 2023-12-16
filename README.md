@@ -55,3 +55,17 @@ To run the tests for the second lab, use the following command:
 ```bash
 yarn test:second-lab
 ```
+
+## Fourth Lab
+
+The fourth lab includes an implementation of a linked list. The files for the fourth lab are located in the `4-lab` directory:
+
+- `linkedList.ts`: Contains the `LinkedList` and `ListNode` classes. The `LinkedList` class includes methods for manipulating the linked list, such as `append()` for adding nodes to the list and `printList()` for printing the values of nodes in the list.
+
+### Running Tests for the Fourth Lab
+
+To run the tests for the fourth lab, use the following command:
+
+```bash
+yarn test:fourth-lab
+```
