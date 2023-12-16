@@ -19,22 +19,39 @@ This is a project with a few lab work for university. It's built with TypeScript
 
 ### Executing program
 
-- Run the first lab's first point with `yarn start:first-lab:firstPoint`
-- Run the first lab's second point with `yarn start:first-lab:secondPoint`
-- Run the first lab's third point with `yarn start:first-lab:thirdPoint`
+- To run the tests, use the following command: `yarn test`
+- To run the tests for the first lab, use the following command: `yarn test:first-lab`
+- To run the tests for the second lab, use the following command: `yarn test:second-lab`
 
-## Help Running Tests
+## First Lab
 
-This project uses Jest for testing. To run the tests, use the following command:
+The first lab includes implementations of various tasks. The files for the first lab are located in the `1-lab` directory:
 
-```bash
-yarn test
-```
+- `firstPoint.ts`: Implementation of the first task.
+- `secondPoint.ts`: Implementation of the second task.
+- `thirdPoint.ts`: Implementation of the third task.
 
-## Running Tests for the First Lab
+### Running the First Lab
 
-This project uses Jest for testing. To run the tests for the first lab, use the following command:
+To run the tasks for the first lab, use the following commands:
 
 ```bash
 yarn test:first-lab
+```
+
+### Second Lab
+
+The second lab includes implementations of various sorting algorithms. The files for the second lab are located in the `2-lab` directory:
+
+- `countingSort.ts`: Implementation of the counting sort algorithm.
+- `quickSort.ts`: Implementation of the quick sort algorithm.
+- `selectionSort.ts`: Implementation of the selection sort algorithm.
+- `standardSort.ts`: Implementation of the standard sort algorithm.
+
+### Running Tests for the Second Lab
+
+To run the tests for the second lab, use the following command:
+
+```bash
+yarn test:second-lab
 ```

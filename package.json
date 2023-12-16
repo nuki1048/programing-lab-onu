@@ -9,7 +9,8 @@
     "start:first-lab:firstPoint": "yarn ts-node 1-lab/firstPoint",
     "start:first-lab:secondPoint": "yarn ts-node 1-lab/secondPoint",
     "start:first-lab:thirdPoint": "yarn ts-node 1-lab/thirdPoint",
-    "test:first-lab": "yarn jest 1-lab"
+    "test:first-lab": "yarn jest 1-lab",
+    "test:second-lab": "jest tests/2-lab"
   },
   "keywords": [],
   "author": "",
