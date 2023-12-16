@@ -1,5 +1,3 @@
-// # 1 Finding number in linked list
-
 import { ListNode } from '../utils/interfaces';
 import {
   generateRandomLinkedList,
