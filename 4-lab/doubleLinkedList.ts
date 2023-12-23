@@ -1,30 +1,33 @@
 export class ListNode {
   value: number;
   next: ListNode | null;
+  prev: ListNode | null;
 
   constructor(value: number) {
     this.value = value;
     this.next = null;
+    this.prev = null;
   }
 }
 
-export class LinkedList {
+export class DoubleLinkedList {
   head: ListNode | null;
+  tail: ListNode | null;
 
   constructor() {
     this.head = null;
+    this.tail = null;
   }
 
   append(value: number): void {
     const newNode = new ListNode(value);
     if (!this.head) {
       this.head = newNode;
+      this.tail = newNode;
     } else {
-      let current = this.head;
-      while (current.next) {
-        current = current.next;
-      }
-      current.next = newNode;
+      newNode.prev = this.tail;
+      this.tail.next = newNode;
+      this.tail = newNode;
     }
   }
 
@@ -41,15 +44,21 @@ export class LinkedList {
       return;
     }
 
-    if (this.head.value === value) {
-      this.head = this.head.next;
-      return;
-    }
-
     let current = this.head;
-    while (current.next) {
-      if (current.next.value === value) {
-        current.next = current.next.next;
+    while (current) {
+      if (current.value === value) {
+        if (current.prev) {
+          current.prev.next = current.next;
+        } else {
+          this.head = current.next;
+        }
+
+        if (current.next) {
+          current.next.prev = current.prev;
+        } else {
+          this.tail = current.prev;
+        }
+
         return;
       }
       current = current.next;
@@ -57,11 +66,11 @@ export class LinkedList {
   }
 
   findNumberInLinkedList(n: number): ListNode | null {
-    let head = this.head;
+    let current = this.head;
 
-    while (head !== null) {
-      if (head.value === n) return head;
-      head = head.next;
+    while (current) {
+      if (current.value === n) return current;
+      current = current.next;
     }
     return null;
   }

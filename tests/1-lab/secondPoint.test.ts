@@ -4,28 +4,24 @@ import {
   linearSearch,
 } from '../../1-lab/secondPoint';
 import { createArrayWithFixedSize } from '../../utils/array-gen';
+import { checkTimeExecutingFunc } from '../../utils/timer-check';
 const MS_PER_SEC = 1000000000;
 describe('tests', () => {
   let start: [number, number];
   let end = 0;
-  beforeEach(() => {
-    start = process.hrtime();
-  });
 
-  afterEach(() => {
-    const end = process.hrtime(start);
-    const diff = end[0] * MS_PER_SEC + end[1] / 1000000;
-
-    console.log(`Execution time: ${diff}ms`);
-  });
   describe('binarySearchRecursive', () => {
     test('should return the index of the target number in an array of length 10', () => {
       const array = createArrayWithFixedSize(10).sort((a, b) => a - b);
       const randomIndex = Math.round(Math.random() * (array.length - 0) + 0);
       const target = array[randomIndex];
       const expectedIndex = randomIndex;
-
       const result = binarySearchRecursive(array, target);
+      console.log(
+        `Execution time for binarySearchRecursive with ${array.length} elements:`,
+
+        checkTimeExecutingFunc(() => binarySearchRecursive(array, target))
+      );
 
       expect(result).toBe(expectedIndex);
     });
@@ -37,7 +33,10 @@ describe('tests', () => {
       const expectedIndex = randomIndex;
 
       const result = binarySearchRecursive(array, target);
-
+      console.log(
+        `Execution time for binarySearchRecursive with ${array.length} elements:`,
+        checkTimeExecutingFunc(() => binarySearchRecursive(array, target))
+      );
       expect(result).toBe(expectedIndex);
     });
 
@@ -48,7 +47,10 @@ describe('tests', () => {
       const expectedIndex = randomIndex;
 
       const result = binarySearchRecursive(array, target);
-
+      console.log(
+        `Execution time for binarySearchRecursive with ${array.length} elements:`,
+        checkTimeExecutingFunc(() => binarySearchRecursive(array, target))
+      );
       expect(result).toBe(expectedIndex);
     });
 
@@ -59,7 +61,10 @@ describe('tests', () => {
       const expectedIndex = randomIndex;
 
       const result = binarySearchRecursive(array, target);
-
+      console.log(
+        `Execution time for binarySearchRecursive with ${array.length} elements:`,
+        checkTimeExecutingFunc(() => binarySearchRecursive(array, target))
+      );
       expect(result).toBe(expectedIndex);
     });
 
@@ -70,7 +75,10 @@ describe('tests', () => {
       const expectedIndex = randomIndex;
 
       const result = binarySearchRecursive(array, target);
-
+      console.log(
+        `Execution time for binarySearchRecursive with ${array.length} elements:`,
+        checkTimeExecutingFunc(() => binarySearchRecursive(array, target))
+      );
       expect(result).toBe(expectedIndex);
     });
   });
@@ -85,7 +93,10 @@ describe('tests', () => {
       const expectedIndex = randomIndex;
 
       const result = binarySearch(array, target);
-
+      console.log(
+        `Execution time for binarySearch with ${array.length} elements:`,
+        checkTimeExecutingFunc(() => binarySearchRecursive(array, target))
+      );
       expect(result).toBe(expectedIndex);
     });
 
@@ -96,7 +107,10 @@ describe('tests', () => {
       const expectedIndex = randomIndex;
 
       const result = binarySearch(array, target);
-
+      console.log(
+        `Execution time for binarySearch with ${array.length} elements:`,
+        checkTimeExecutingFunc(() => binarySearchRecursive(array, target))
+      );
       expect(result).toBe(expectedIndex);
     });
 
@@ -107,7 +121,10 @@ describe('tests', () => {
       const expectedIndex = randomIndex;
 
       const result = binarySearch(array, target);
-
+      console.log(
+        `Execution time for binarySearch with ${array.length} elements:`,
+        checkTimeExecutingFunc(() => binarySearchRecursive(array, target))
+      );
       expect(result).toBe(expectedIndex);
     });
 
@@ -118,7 +135,10 @@ describe('tests', () => {
       const expectedIndex = randomIndex;
 
       const result = binarySearch(array, target);
-
+      console.log(
+        `Execution time for binarySearch with ${array.length} elements:`,
+        checkTimeExecutingFunc(() => binarySearchRecursive(array, target))
+      );
       expect(result).toBe(expectedIndex);
     });
 
@@ -129,7 +149,10 @@ describe('tests', () => {
       const expectedIndex = randomIndex;
 
       const result = binarySearch(array, target);
-
+      console.log(
+        `Execution time for binarySearch with ${array.length} elements:`,
+        checkTimeExecutingFunc(() => binarySearchRecursive(array, target))
+      );
       expect(result).toBe(expectedIndex);
     });
   });
@@ -143,10 +166,11 @@ describe('tests', () => {
       const target = array[randomIndex];
       const expectedIndex = randomIndex;
 
-      const startTime = new Date().getTime();
       const result = linearSearch(array, target);
-      const endTime = new Date().getTime();
-      const executionTime = endTime - startTime;
+      console.log(
+        `Execution time for linearSearch with ${array.length} elements:`,
+        checkTimeExecutingFunc(() => binarySearchRecursive(array, target))
+      );
 
       expect(result).toBe(expectedIndex);
     });
@@ -158,7 +182,10 @@ describe('tests', () => {
       const expectedIndex = randomIndex;
 
       const result = linearSearch(array, target);
-
+      console.log(
+        `Execution time for linearSearch with ${array.length} elements:`,
+        checkTimeExecutingFunc(() => binarySearchRecursive(array, target))
+      );
       expect(result).toBe(expectedIndex);
     });
 
@@ -169,7 +196,10 @@ describe('tests', () => {
       const expectedIndex = randomIndex;
 
       const result = linearSearch(array, target);
-
+      console.log(
+        `Execution time for linearSearch with ${array.length} elements:`,
+        checkTimeExecutingFunc(() => binarySearchRecursive(array, target))
+      );
       expect(result).toBe(expectedIndex);
     });
 
@@ -180,7 +210,10 @@ describe('tests', () => {
       const expectedIndex = randomIndex;
 
       const result = linearSearch(array, target);
-
+      console.log(
+        `Execution time for linearSearch with ${array.length} elements:`,
+        checkTimeExecutingFunc(() => binarySearchRecursive(array, target))
+      );
       expect(result).toBe(expectedIndex);
     });
 
@@ -191,7 +224,10 @@ describe('tests', () => {
       const expectedIndex = randomIndex;
 
       const result = linearSearch(array, target);
-
+      console.log(
+        `Execution time for linearSearch with ${array.length} elements:`,
+        checkTimeExecutingFunc(() => binarySearchRecursive(array, target))
+      );
       expect(result).toBe(expectedIndex);
     });
   });
